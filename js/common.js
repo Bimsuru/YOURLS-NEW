@@ -1,11 +1,11 @@
 // Handle .hide-if-no-js and .hide-if-js styles
 $(document).ready(function(){
-	$('.hide-if-no-js').removeClass('hide-if-no-js');
- 	$('.hide-if-js').hide();
+	$(".hide-if-no-js").removeClass("hide-if-no-js");
+ 	$(".hide-if-js").hide();
 });
 
 // Change an element text an revert in a smooth pulse. el is an element id like '#copybox h2'
-function html_pulse( el, newtext ){
+function HtmlPulse( el, newtext ){
 	var oldtext = $(el).html();
 	// Fast pulse to "Copied" and revert
 	$(el).fadeTo(
@@ -14,11 +14,11 @@ function html_pulse( el, newtext ){
 		function(){
 			$(el)
 			.html( newtext )
-			.css('opacity', 1)
+			.css("opacity", 1)
 			.fadeTo(
 				"slow", 1, // this fades from 1 to 1: just a 'sleep(1)' actually
 				function(){
-					$(el).fadeTo("normal", 0.01, function(){$(el).html( oldtext ).css('opacity', 1)});
+					$(el).fadeTo("normal", 0.01, function(){$(el).html( oldtext ).css("opacity", 1)});
 				}
 			);
 		}
@@ -28,12 +28,12 @@ function html_pulse( el, newtext ){
 }
 
 // Update feedback message
-function feedback(msg, type, delay) {
-	closeme = ( type == 'fail' || type == 'error' ) ? true : false;		
-	delay = delay || ( closeme == true ? 10000 : 3500 );
+function feedback(msg, type, delay, closeme) {
+	closeme = ( type === "fail" || type === "error" ) ? true : false;		
+	delay = delay || ( closeme === true ? 10000 : 3500 );
 	$.notifyBar({
-		html: '<span>'+msg+'</span>',
-		delay: delay,
+		html: "<span>"+msg+"</span>",
+		delay,
 		animationSpeed: "normal",
 		close: closeme,
 		cls: type
