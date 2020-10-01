@@ -15,7 +15,16 @@ yourls_html_menu();
 		<p><?php yourls_e( 'YOURLS comes with handy <span>bookmarklets</span> for easier link shortening and sharing.' ); ?></p>
 
 		<h3><?php yourls_e( 'Standard or Instant, Simple or Custom' ); ?></h3>
- 
+
+		<ul>
+			<li><?php yourls_e( 'The <span>Standard Bookmarklets</span> will take you to a page where you can easily edit or delete your brand new short URL.' ); ?></li>
+
+			<li><?php yourls_e( 'The <span>Instant Bookmarklets</span> will pop the short URL without leaving the page you are viewing.' ); ?></li>
+
+			<li><?php yourls_e( 'The <span>Simple Bookmarklets</span> will generate a short URL with a random or sequential keyword.' ); ?></li>
+
+			<li><?php yourls_e( 'The <span>Custom Keyword Bookmarklets</span> will prompt you for a custom keyword first.' ); ?></li>
+		</ul>
 
 		<p><?php
 		yourls_e( "If you want to share a description along with the link you're shortening, simply <span>select text</span> on the page you're viewing before clicking on your bookmarklet link" );
