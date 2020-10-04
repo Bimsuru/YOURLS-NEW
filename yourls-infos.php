@@ -529,6 +529,16 @@ yourls_html_menu();
 	</div>
 
 <?php } // endif do log redirect ?>
- 
+
+
+	<div id="stat_tab_share" class="tab">
+		<h2><?php yourls_e( 'Share' ); ?></h2>
+
+		<?php yourls_share_box( $longurl, yourls_link($keyword), $title, '', '<h3>' . yourls__( 'Short link' ) . '</h3>', '<h3>' . yourls__( 'Quick Share' ) . '</h3>'); ?>
+
+	</div>
+
+</div>
+
 
 <?php yourls_html_footer(); ?>
